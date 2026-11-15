@@ -1,0 +1,44 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/looks-plugin",
+    "description": "Funseco looks — window styles and panel choices (/style, /votepanel, /donpanel, /admin panel)",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Looks\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "looks",
+            "name": "Looks",
+            "description": "looks — window styles and panel choices (/style, /votepanel, /donpanel, /admin panel)",
+            "provider": "Funseco\\Looks\\LooksServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "funseco/admin-plugin": "@dev",
+        "funseco/donate-plugin": "@dev",
+        "funseco/records-plugin": "@dev",
+        "funseco/votes-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Looks\\Tests\\": "tests/"
+        }
+    }
+}
